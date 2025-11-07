@@ -1,8 +1,8 @@
 
 class Book:
-    def __init__(self, year, auther, title):
+    def __init__(self, year, author, title):
         self.year = year
-        self.auther = auther
+        self.author = author
         self.title = title
     
 class Library:
@@ -11,14 +11,14 @@ class Library:
         self.books = []
     
     
-    def add_book(self, year, auther, title):
-        new_book = Book(year ,auther ,title)
+    def add_book(self, year, author, title):
+        new_book = Book(year ,author ,title)
         self.books.append(new_book)
         
     
     def show_book(self):
         for book in self.books:
-            print(f"It is {book.title}, published in {book.year} and the auther is {book.auther}.")
+            print(f"It is {book.title}, published in {book.year} and the auther is {book.author}.")
         
         
         
@@ -61,34 +61,28 @@ while True:
           4. Remove Book
           5. Exit
           """)
-    choice =input("please enter your choice:")
-    if choice.isdigit():
-        choice = int(choice)
+    choice =int(input("please enter your choice:"))
 
-
-        if 1 <=choice <= 5:
-            if choice == 1:
-                title = input("please enter the name of the book:")
-                year = input("please enter the year of pubkish:")
-                auther = input("please write the name of the auther:")
-                my_library.add_book(year, auther, title)
-            elif choice == 2:
-                my_library.show_book()
-            elif choice == 3:
-                title = input("please enter the name of the book:")
-                my_library.find_book(title)
-            elif choice == 4:
-                title = input("please enter the name of the book:")
-                my_library.remove_book(title)
-            elif choice == 5:
-                break
+    if 1 <=choice <= 5:
+        if choice == 1:
+            title = input("please enter the name of the book:")
+            year = input("please enter the year of pubkish:")
+            author = input("please write the name of the auther:")
+            my_library.add_book(year, author, title)
+        elif choice == 2:
+            my_library.show_book()
+        elif choice == 3:
+            title = input("please enter the name of the book:")
+            my_library.find_book(title)
+        elif choice == 4:
+            my_library.remove_book(title)
+        elif choice == 5:
+            break
         else:
             print("please enter a number")
-            
-    else:
-        print("you didn't enter a number!")
-            
-        
+    
+    
+print("Goodbye! Thanks for using My Library.")
+       
             
     
-
