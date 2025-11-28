@@ -51,38 +51,8 @@ class Library:
                   print("I did'nt found any book like this")
                   
                   
-my_library = Library()
 
-while True:
-    print("""
-          1. Add Book
-          2. Show Books
-          3. Find Book
-          4. Remove Book
-          5. Exit
-          """)
-    choice =int(input("please enter your choice:"))
-
-    if 1 <=choice <= 5:
-        if choice == 1:
-            title = input("please enter the name of the book:")
-            year = input("please enter the year of pubkish:")
-            author = input("please write the name of the auther:")
-            my_library.add_book(year, author, title)
-        elif choice == 2:
-            my_library.show_book()
-        elif choice == 3:
-            title = input("please enter the name of the book:")
-            my_library.find_book(title)
-        elif choice == 4:
-            my_library.remove_book(title)
-        elif choice == 5:
-            break
-        else:
-            print("please enter a number")
-    
-    
-print("Goodbye! Thanks for using My Library.")
        
             
     
+
