@@ -17,7 +17,7 @@ Das Projekt demonstriert grundlegende Kenntnisse in Python, objektorientierter P
  
 ├── main.py        # CLI-Loop, Benutzerinteraktion
 ├── library.py     # Definition der Klassen Book und Library
-└── README.md   # Project documentation
+└── README.md      # Project documentation
 
 ```
 
